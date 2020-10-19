@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20201019 15:24:56.650" generator="Robot 3.2.2 (Python 2.7.16 on darwin)">
+<robot rpa="false" generated="20201019 15:35:11.757" generator="Robot 3.2.2 (Python 2.7.16 on darwin)">
 <suite source="/Users/tanawootchawapon/Desktop/robot-practice/test/demo.robot" id="s1" name="Demo">
 <test id="s1-t1" name="logInTest">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -8,24 +8,99 @@
 <arg>${ClientURL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20201019 15:24:56.924" level="INFO">Opening browser 'headlesschrome' to base url 'https://eko-dev.ekoapp.com/?regionCode=sea'.</msg>
-<status status="PASS" endtime="20201019 15:25:02.126" starttime="20201019 15:24:56.924"></status>
+<msg timestamp="20201019 15:35:12.080" level="INFO">Opening browser 'chrome' to base url 'https://eko-dev.ekoapp.com/?regionCode=sea'.</msg>
+<status status="PASS" endtime="20201019 15:35:16.866" starttime="20201019 15:35:12.079"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>10s</arg>
+<arg>0.5s</arg>
 </arguments>
-<msg timestamp="20201019 15:25:12.129" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" endtime="20201019 15:25:12.129" starttime="20201019 15:25:02.127"></status>
+<status status="PASS" endtime="20201019 15:35:16.867" starttime="20201019 15:35:16.867"></status>
 </kw>
-<status status="PASS" endtime="20201019 15:25:12.130" critical="yes" starttime="20201019 15:24:56.923"></status>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>bb01</arg>
+</arguments>
+<msg timestamp="20201019 15:35:16.868" level="INFO">Typing text 'bb01' into text field 'username'.</msg>
+<status status="PASS" endtime="20201019 15:35:18.583" starttime="20201019 15:35:16.868"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>password</arg>
+</arguments>
+<msg timestamp="20201019 15:35:18.585" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20201019 15:35:19.626" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20201019 15:35:20.195" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" endtime="20201019 15:35:20.196" starttime="20201019 15:35:18.584"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//button[@type="submit"]</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" endtime="20201019 15:35:21.739" starttime="20201019 15:35:20.196"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[@type="submit"]</arg>
+</arguments>
+<msg timestamp="20201019 15:35:21.740" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" endtime="20201019 15:35:22.811" starttime="20201019 15:35:21.739"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//button[contains(@class, "SettingWrapper")]</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" endtime="20201019 15:35:28.623" starttime="20201019 15:35:22.812"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, "SettingWrapper")]</arg>
+</arguments>
+<msg timestamp="20201019 15:35:28.624" level="INFO">Clicking element '//button[contains(@class, "SettingWrapper")]'.</msg>
+<status status="PASS" endtime="20201019 15:35:29.692" starttime="20201019 15:35:28.624"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<arguments>
+<arg>//li[text()="Log out"]</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" endtime="20201019 15:35:31.222" starttime="20201019 15:35:29.692"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//li[text()="Log out"]</arg>
+</arguments>
+<msg timestamp="20201019 15:35:31.223" level="INFO">Clicking element '//li[text()="Log out"]'.</msg>
+<status status="PASS" endtime="20201019 15:35:32.352" starttime="20201019 15:35:31.223"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>username</arg>
+<arg>timeout=30s</arg>
+</arguments>
+<status status="PASS" endtime="20201019 15:35:32.861" starttime="20201019 15:35:32.352"></status>
+</kw>
+<status status="PASS" endtime="20201019 15:35:32.862" critical="yes" starttime="20201019 15:35:12.079"></status>
 </test>
 <kw type="teardown" name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20201019 15:25:12.202" starttime="20201019 15:25:12.131"></status>
+<status status="PASS" endtime="20201019 15:35:33.478" starttime="20201019 15:35:32.863"></status>
 </kw>
-<status status="PASS" endtime="20201019 15:25:12.202" starttime="20201019 15:24:56.652"></status>
+<status status="PASS" endtime="20201019 15:35:33.478" starttime="20201019 15:35:11.759"></status>
 </suite>
 <statistics>
 <total>
