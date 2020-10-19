@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20201019 15:24:56.650" generator="Robot 3.2.2 (Python 2.7.16 on darwin)">
+<suite source="/Users/tanawootchawapon/Desktop/robot-practice/test/demo.robot" id="s1" name="Demo">
+<test id="s1-t1" name="logInTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${ClientURL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20201019 15:24:56.924" level="INFO">Opening browser 'headlesschrome' to base url 'https://eko-dev.ekoapp.com/?regionCode=sea'.</msg>
+<status status="PASS" endtime="20201019 15:25:02.126" starttime="20201019 15:24:56.924"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20201019 15:25:12.129" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20201019 15:25:12.129" starttime="20201019 15:25:02.127"></status>
+</kw>
+<status status="PASS" endtime="20201019 15:25:12.130" critical="yes" starttime="20201019 15:24:56.923"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20201019 15:25:12.202" starttime="20201019 15:25:12.131"></status>
+</kw>
+<status status="PASS" endtime="20201019 15:25:12.202" starttime="20201019 15:24:56.652"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Demo" pass="1">Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
